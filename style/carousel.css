@@ -1,0 +1,265 @@
+/* --- CAROUSEL SECTION --- */
+.carousel-container {
+  position: relative;
+  width: 1100px;
+  margin: 30px auto 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: none;
+  border-radius: 0;
+  z-index: 2;
+}
+
+.carousel-arrow svg polyline {
+  stroke: #e5e5e5;
+  transition: stroke 0.2s;
+}
+
+.carousel-arrow:hover svg polyline,
+.carousel-arrow:active svg polyline {
+  stroke: #5bc8af;
+}
+
+.carousel-image {
+  width: 269px;
+  height: auto;
+  box-shadow: 0px 10px 30px 0px #0000001f;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 40px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-content {
+  width: 675px;
+  height: 269px;
+  background: #194d44;
+  box-shadow: 0px 10px 30px 0px #0000001f;
+  border-radius: 16px;
+  color: #fff;
+  padding: 32px 40px 32px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-quote {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  font-size: 64px;
+  color: #3cb39e;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.carousel-content h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.carousel-content p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d3d3d3;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: #3cb39e;
+}
+
+.carousel-slides {
+  display: flex;
+  flex-direction: row;
+  width: 944px;
+  height: auto;
+  position: relative;
+}
+
+.carousel-slide {
+  min-width: 944px;
+  height: 269px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: none;
+}
+
+.carousel-slides {
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Responsive Carousel */
+@media (max-width: 1024px) {
+  .carousel-container {
+    max-width: 100vw;
+    width: 100vw;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .carousel-slides {
+    width: 100vw;
+  }
+
+  .carousel-slide {
+    min-width: auto;
+    width:auto;
+  }
+
+  .carousel-image {
+    width: 198px;
+    height: 198px;
+    margin-right: 24px;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  .carousel-content {
+    width: auto;
+    height: 198px;
+    min-height: 198px;
+    background: #194d44;
+    border-radius: 8px;
+    color: #fff;
+    padding: 32px 32px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .carousel-quote {
+    top: 16px;
+    right: 32px;
+    font-size: 40px;
+  }
+
+  .carousel-content h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  .carousel-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  .carousel-dots {
+    bottom: 13px;
+  }
+
+  .carousel-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-slide {
+    min-width: 82vw;
+    max-width: 360px;
+    width: 100vw;
+    height: auto;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+  }
+
+  .carousel-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    position: absolute;
+    left: 5%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0px 10px 30px 0px #0000001f;
+    border-radius: 16px;
+  }
+
+  .carousel-content {
+    width: 328px;
+    height: 344px;
+    min-height: 344px;
+    margin-top: 90px;
+    border-radius: 8px;
+    background: #194d44;
+    box-shadow: 0px 10px 30px 0px #0000001f;
+    padding: 60px 16px 24px 16px;
+    position: relative;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .carousel-quote {
+    top: 16px;
+    right: 24px;
+    font-size: 42px;
+  }
+
+  .carousel-content h2 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .carousel-content p {
+    margin-top: 23px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .carousel-dots {
+    bottom: -24px;
+  }
+}

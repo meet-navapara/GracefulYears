@@ -1,0 +1,220 @@
+/* --- ORGANIZE EVERYTHING SECTION --- */
+.organize-section {
+  width: 100%;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.organize-content {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin: 24px 0 24px 0;
+  padding: 0px 16px;
+  justify-content: center;
+}
+.organize-col1{
+  font-family: Montserrat;
+font-weight: 800;
+font-style: italic !important;
+font-size: 18px;
+line-height: 28px;
+width: 33% !important;
+letter-spacing: 0%;
+
+}
+.organize-col1 span{
+  font-weight: 800;
+}
+
+.organize-col {
+  color: var(--black);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: Montserrat;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0%;
+
+}
+.organize-row-wrapper{
+  width: 66% !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.organize-buttons {
+  padding: 0px 16px;
+  padding: 0px ;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 24px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.organize-buttons .btn-secondary {
+  width: 340px;
+  height: 96px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--cta-secondary-border);
+  background: #fff;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  gap: 8px;
+  font-family: Montserrat;
+font-weight: 700;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+
+.organize-buttons .btn-secondary:hover,
+.organize-buttons{
+  border-color: #5EC6A7;
+  color: #5EC6A7;
+}
+
+.organize-buttons .btn-secondary .info-icon {
+  color: #bababa;
+  margin-left: 8px;
+  font-size: 1.2em;
+  transition: color 0.2s;
+}
+
+.organize-buttons .btn-secondary:hover .info-icon,
+.organize-buttons .btn-secondary:focus .info-icon {
+  color: #5EC6A7;
+}
+
+.organize-buttons .tooltip-parent {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+.organize-buttons .tooltip {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  background: #25665a;
+  color: #fff;
+  padding: 16px 18px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: 0 2px 8px rgba(32,80,67,0.12);
+  margin-top: 12px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.organize-buttons .tooltip-parent:hover .tooltip,
+.organize-buttons .tooltip-parent:focus-within .tooltip {
+  display: block;
+}
+
+.organize-buttons .tooltip::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #25665a;
+  z-index: 9999;
+}
+
+/* Responsive Organize Section */
+@media (max-width: 900px) {
+  .organize-content {
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+  }
+  
+  .organize-buttons {
+    gap: 10px;
+  }
+  .understand-header-row{
+    margin-top: 30px;
+  }
+  .organize-col1{
+    width: 100% !important;
+  }
+  .organize-row-wrapper{
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+  }
+  .organize-section {
+    padding-top: 50px;
+  }
+  .understand-header-row{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .organize-section {
+    padding: 32px 16px;
+  }
+  
+  .organize-content {
+    padding: 0 8px;
+  }
+  .organize-content{
+    flex-direction: column;
+  }
+  .organize-row-wrapper{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 1020px) {
+.organize-section {
+    padding-top: 70px;
+  }
+}
+/* Responsive Organize Section */
+@media (max-width: 900px) {
+  .organize-section {
+    padding-top: 50px;
+  }
+  .organize-content {
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+  }
+  
+ 
+  .understand-header-row{
+    margin-top: 30px;
+  }
+}
